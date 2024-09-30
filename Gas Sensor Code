@@ -65,7 +65,7 @@ void __attribute__ ((interrupt(ADC_VECTOR))) ADC_ISR (void)
         case ADCIV_ADCINIFG:
             break;
         case ADCIV_ADCIFG:
-            light = ADCMEM0;
+            // light = ADCMEM0;
             __bic_SR_register_on_exit(LPM0_bits);            // Clear CPUOFF bit from LPM0
             break;
         default:
